@@ -1,0 +1,70 @@
+{
+  "alumno": [
+    {
+      "id": 1,
+      "correo": "ni.norambuena@duocuc.cl",
+      "seccion": "02D",
+      "fecha": "12/12/2022"
+    },
+    {
+      "id": 2,
+      "correo": "vi.guerra@duocuc.cl",
+      "seccion": "02D",
+      "fecha": "12/12/2022"
+    },
+    {
+      "id": 3,
+      "correo": "mart.norambuena@duocuc.cl",
+      "seccion": "06D",
+      "fecha": "12/12/2022"
+    },
+    {
+      "id": 4,
+      "correo": "se.guerra@duocuc.cl",
+      "seccion": "06D",
+      "fecha": "12/12/2022"
+    },
+    {
+      "correo": "",
+      "seccion": "",
+      "fecha": "",
+      "id": 5
+    },
+    {
+      "correo": "anuel@duocuc.cl",
+      "seccion": "D12",
+      "fecha": "14/12/2022",
+      "id": 6
+    },
+    {
+      "correo": "anuel@duocuc.cl",
+      "seccion": "D12",
+      "fecha": "14/12/2022",
+      "id": 7
+    },
+    {
+      "correo": "vi.guerra@duocuc.cl",
+      "seccion": "60D",
+      "fecha": "14/12/2022",
+      "id": 8
+    },
+    {
+      "correo": "vi.guerra@duocuc.cl",
+      "seccion": "60D",
+      "fecha": "12/12/2022",
+      "id": 9
+    },
+    {
+      "correo": "nicolas.noramb@duocuc.cl",
+      "seccion": "60D",
+      "fecha": "14/12/2022",
+      "id": 10
+    },
+    {
+      "correo": "nicolas.noramb@duocuc.cl",
+      "seccion": "60D",
+      "fecha": "14/12/2022",
+      "id": 11
+    }
+  ]
+}

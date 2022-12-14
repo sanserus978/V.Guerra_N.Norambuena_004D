@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="warning"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title color="light">Menú</ion-title>
+
+
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+  <h1 class="parrafo">Bienvenido(a) a RegApp,
+    {{getNombre()}}</h1>
+
+    
+  <img src="assets/pngtree-mobile-phone-qr-code-scanning-png-image_2847709.jpg">
+  <ion-button class="buttonlogin" expand="block" shape="round" routerLink="/generar-qr">Generar codigo</ion-button>
+  <ion-button class="buttonlogin" expand="block" shape="round" routerLink="/agregar-alumnos">Listar Manualmente</ion-button>
+
+  <ion-card class="cardhomeprof">
+  <h1 class="titlecard">Asistencia</h1>
+  <h5 class="contentcard">En esta aplicacion podra registrar la asistencia de sus alumnos automaticamente generando un codigo QR</h5>
+ </ion-card>
+
+</ion-content>

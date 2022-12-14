@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon slot="icon-only" name="menu-outline" color="warning"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title color="light">Menú</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+
+  <h1 class="parrafo">Bienvenido(a) a RegApp,
+    {{getNombre()}}</h1>
+
+  <img src="assets/pngtree-mobile-phone-qr-code-scanning-png-image_2847709.jpg"> 
+  
+  <br>
+  <br>
+  <ion-button class="buttonlogin" expand="block" shape="round" routerLink="/activar-camara">Activar camara</ion-button>
+
+
+ <ion-card class="cardhome">
+  <h1 class="titlecard">Asistencia</h1>
+  <h5 class="cardcont">Por reglamento académico tienes
+    que tener un 75% de asistencia
+    en cada uno de tus ramos para
+    aprobar el curso, en esta APP
+   podras registrar tu asistencia </h5>
+ </ion-card>
+
+
+</ion-content>

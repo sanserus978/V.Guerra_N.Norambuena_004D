@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-back-button color="warning" class="icon"
+        defaultHref="/"
+        text="Volver"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" class="tittle">QR</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card-header>
+    <ion-card-title class="title">Generar Codigo QR</ion-card-title>
+    <ion-card-subtitle class="subtitulo">Como Docente, es encargado de generar un codigo QR con los datos de la sección para registrar la asistencia de sus alumnos</ion-card-subtitle>
+    <ion-card-subtitle class="subtitulo">Recuerde que el codigo tiene un tiempo de duración de 15 minutos!!!</ion-card-subtitle>
+  </ion-card-header>
+  <ion-card class="ion-text-center">
+    <ion-card-content>
+
+      <ion-item>
+        <ion-label position="fixed">Modulo: </ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.modulo" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="fixed">Sección: </ion-label>
+        <ion-input type="text" [(ngModel)]="usuario.seccion" required></ion-input>
+      </ion-item>
+
+      <ion-button 
+          expand="block" 
+          class="botonr" 
+          (click)="generaScan()">
+          Generar Codigo QR 
+      </ion-button>
+
+      <qrcode 
+        [qrdata]="qrCodeString" 
+        [width]="256" 
+        [errorCorrectionLevel]="'M'">
+      </qrcode>
+
+
+    </ion-card-content>
+ </ion-card>
+ <ion-card>
+  <ion-button 
+  expand="block" 
+  class="botonr" 
+  (click)="verScan()">
+     Ver Resultado del QR
+  </ion-button>
+<br>
+ 
+  <ion-label >Resultado del QR: {{scannedResult}}</ion-label>
+</ion-card>
+  <br>
+  <ion-button expand="block" class="botonr"  (click)="presentAlert()">Completar Asistencia</ion-button>
+
+</ion-content>

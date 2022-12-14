@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-back-button color="warning" class="icon"
+        defaultHref="/"
+        text="Volver"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="tittle">Profesor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background" fullscreen="True">
+
+  <form #formulario="ngForm" [formGroup]="formularioLogin">
+  <br><br><br>
+    <ion-item>
+      <ion-label>Correo Profesor: </ion-label>
+      <ion-input type="email" placeholder="Email"
+                 name="correo" value="" [(ngModel)]= "usuario.email"
+                 pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                 pattern=".+@duocuc.cl"
+                 formControlName="correo"
+                 minlength="5"
+                 maxlength="30"
+                 required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Password: </ion-label>
+      <ion-input type="password" placeholder="Contraseña"
+                 name="password" value="" [(ngModel)]= "usuario.password" minlength="8" maxlength="16"
+                 formControlName="password"
+                 required>
+      </ion-input>
+    </ion-item>
+    <br>
+
+    <ion-button [disabled] ="formulario.invalid"
+            type="submit" expand="block" (click)="Ingresar()" class="button">
+      Ingresar
+    </ion-button>
+
+  </form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  <ion-footer>
+    <ion-toolbar class="footerisp">
+    <ion-buttons slot="end">
+      <ion-button color="light" fill="outline" expand="block" routerLink="/registrarse">Registrarse
+      </ion-button>
+    </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>

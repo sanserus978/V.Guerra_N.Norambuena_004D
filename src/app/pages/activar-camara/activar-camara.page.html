@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-back-button color="warning" class="icon"
+        defaultHref="/"
+        text="Volver"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title color="light" class="tittle"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background" >
+  <ion-button  (click)="Scan()">Activar camara</ion-button>
+
+  <div *ngIf="codescan">
+    <p>informacion: {{codescan["text"] }} </p>
+  </div>
+
+</ion-content>

@@ -1,0 +1,106 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-buttons slot="start">
+      <ion-back-button color="warning" class="icon"
+        defaultHref="/"
+        text="Volver"
+        mode="ios">
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="tittle" color="light">Registrarse</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content fullscreen="True">
+  <ion-card>
+      <ion-card-header>     
+        <ion-card-title>Registro</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <form [formGroup] = "formularioRegistro" (keyup.enter)="CrearUsuario()">
+
+          <ion-item>
+            <ion-label>Nombre: </ion-label>
+            <ion-input type="text" placeholder="Nombre"
+                       name="nombre"
+                       formControlName="nombre" required
+                       minlength="3"
+                       maxlength="20">
+            </ion-input>
+          </ion-item>
+      
+
+          <ion-item>
+            <ion-label>Apellido: </ion-label>
+            <ion-input type="text" placeholder="Apellido"
+                       name="apellido" [(ngModel)]= "usuario.apellido" 
+                       formControlName="apellido" required
+                       minlength="3"
+                       maxlength="20">
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Telefono: </ion-label>
+            <ion-input type="number" placeholder="Telefono"
+                       name="telefono" [(ngModel)]= "usuario.telefono" 
+                       formControlName="telefono" required
+                       min="999999999"
+                       max="99999999999">
+            </ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label>Correo: </ion-label>
+            <ion-input type="email" placeholder="Email"
+                       name="correo" value="" [(ngModel)]= "usuario.correo"
+                       pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                       pattern=".+@duocuc.cl"
+                       formControlName="correo"
+                       minlength="5"
+                       maxlength="30"
+                       required>
+            </ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Password: </ion-label>
+            <ion-input type="password" placeholder="Contraseña"
+                       name="password" value="" [(ngModel)]= "usuario.password" minlength="8" maxlength="16"
+                       formControlName="password"
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                       required>
+      
+            </ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label>Re-Password: </ion-label>
+            <ion-input type="password" placeholder="Reingrese Contraseña"
+                       name="password2" value="" [(ngModel)]= "usuario.password2"  minlength="8" maxlength="16"
+                       formControlName="confirmaPass"
+                       pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                       required>
+            </ion-input>
+          </ion-item>
+
+          <ion-list>
+            <ion-item>Seleccione: 
+              <ion-select formControlName="categoria"  placeholder="Estudiante/Docente">
+                <ion-select-option  value="estudiante">Estudiante</ion-select-option>
+                <ion-select-option  value="docente">Docente</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </form>
+        <ion-button (click)="CrearUsuario()" expand="block" fill="outline" shape="round" routerLink="/login">
+          Registrar
+        </ion-button>
+      </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>
+

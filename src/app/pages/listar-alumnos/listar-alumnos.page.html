@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-title color="light">Listar Alumnos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="warning" class="icon"
+        defaultHref="/"
+        text="Volver"
+        mode="ios"> back
+      </ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let a of alumnos">
+      <ion-label class="correo"> {{a.correo}} {{a.seccion}} {{a.fecha}} </ion-label>
+      </ion-item>
+  </ion-list>
+
+</ion-content>
